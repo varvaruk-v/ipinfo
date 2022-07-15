@@ -1,17 +1,45 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
+NAME = "showip"
+DESCRIPTION = "Get information about your IP or any other IP"
+URL = "https://github.com/varvaruk-v/showip"
+EMAIL = ""
+AUTHOR = "Viktor Varvaruk"
+REQUIRES_PYTHON = ">=3.7.0"
+VERSION = "1.0.1"
+
+with open("requirements.txt", encoding="utf-8") as f:
+    REQUIRED = f.readlines()
+
+try:
+    with open("README.md", encoding="utf-8") as f:
+        long_description = "\n" + f.read()
+except FileNotFoundError:
+    long_description = DESCRIPTION
 
 setup(
-    name='showip',
-    version='1.0.0',
-    license='MIT',
-    author="Viktor Varvaruk",
-    author_email='viktorvarvaruk01@gmail.com',
-    packages=find_packages(),
-    url='https://github.com/varvaruk-v/showip',
-    keywords='ip adress internet api',
-    install_requires=[
-          'requests',
-      ],
-
+    name=NAME,
+    version=VERSION,
+    description=DESCRIPTION,
+    long_description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    author=AUTHOR,
+    author_email=EMAIL,
+    python_requires=REQUIRES_PYTHON,
+    url=URL,
+    packages=["showip"],
+    entry_points={
+        "console_scripts": ["showip=showip.cli:main"]
+    },
+    install_requires=REQUIRED,
+    license="MIT",
+    classifiers=[
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Operating System :: Android",
+        "Operating System :: Microsoft :: Windows",
+        "Topic :: Internet",
+        "License :: OSI Approved :: MIT",
+    ],
 )
