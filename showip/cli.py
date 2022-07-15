@@ -1,4 +1,4 @@
-from showip import getdata
+from showip.showip import getdata
 import argparse
 
 parser = argparse.ArgumentParser(description='Get information about your IP or any other IP')
