@@ -1,4 +1,4 @@
-def get(ip=""):
+def getdata(ip=""):
     import requests, sys
     if ip == None or ip == "":
         ip = ""
