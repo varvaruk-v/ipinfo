@@ -12,11 +12,10 @@ pip install showip
 ```
 
 ## Usage
-### 1)
+### 1) Displays information about your IP address and the DNS server you use
 ```bash
 showip
 ```
-Displays information about your IP address and the DNS server you use
 
 Output:
 ```bash
@@ -29,11 +28,10 @@ Reverse: dns.google
 ----------------------------
 DNS: 8.8.8.8(United States - Google LLC)
 ```
-### 2)
+### 2) Use parameter "-ip" to see information about any IP addresses or domain
 ```bash
 showip -ip google.com
 ```
-Use parameter "-ip" to see information about any IP addresses or domain
 
 Output:
 ```bash
