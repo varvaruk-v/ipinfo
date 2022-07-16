@@ -6,7 +6,7 @@ URL = "https://github.com/varvaruk-v/showip"
 EMAIL = ""
 AUTHOR = "Viktor Varvaruk"
 REQUIRES_PYTHON = ">=3.7.0"
-VERSION = "1.0.6"
+VERSION = "1.1.0"
 
 with open("requirements.txt", encoding="utf-8") as f:
     REQUIRED = f.readlines()

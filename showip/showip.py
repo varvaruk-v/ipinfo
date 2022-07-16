@@ -1,5 +1,6 @@
+import requests, sys
+
 def getdata(ip=""):
-    import requests, sys
     if ip == None or ip == "":
         ip = ""
     url = f"http://ip-api.com/json/{ip}?fields=66846719"
@@ -21,4 +22,8 @@ def getdata(ip=""):
         print("[ERROR] Unknown error. Check your internet connection")
         sys.exit()
 
-        
+def dns():
+    url = "http://edns.ip-api.com/json"
+    r = requests.get(url)
+    if r.status_code == 200:
+        return r.json()
