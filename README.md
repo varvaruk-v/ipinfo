@@ -12,7 +12,7 @@ pip install showip
 ```
 
 ## Usage
-### 123
+### 1)
 ```bash
 showip
 ```
@@ -29,4 +29,18 @@ Reverse: dns.google
 ----------------------------
 DNS: 8.8.8.8(United States - Google LLC)
 ```
+### 2)
+```bash
+showip -ip google.com
+```
+Use parameter "-ip" to see information about any IP addresses or domain
 
+Output:
+```bash
+IP: 142.251.39.110
+Country: Netherlands, NL
+Region: North Holland, NH
+City: Amsterdam
+ISP: Google LLC
+Reverse: ams15s48-in-f14.1e100.net
+```
