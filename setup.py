@@ -29,7 +29,7 @@ setup(
     url=URL,
     packages=["showip"],
     entry_points={
-        "console_scripts": ["showip=showip.cli:main"]
+        "console_scripts": ["showip=showip.cli:main", "myip=showip.cli:main"]
     },
     install_requires=REQUIRED,
     license="MIT",
