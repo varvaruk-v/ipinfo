@@ -42,3 +42,6 @@ City: Amsterdam
 ISP: Google LLC
 Reverse: ams15s48-in-f14.1e100.net
 ```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
