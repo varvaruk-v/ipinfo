@@ -6,7 +6,7 @@ URL = "https://github.com/varvaruk-v/showip"
 EMAIL = ""
 AUTHOR = "Viktor Varvaruk"
 REQUIRES_PYTHON = ">=3.7.0"
-VERSION = "1.1.0"
+VERSION = "1.1.2"
 
 with open("requirements.txt", encoding="utf-8") as f:
     REQUIRED = f.readlines()
@@ -29,7 +29,7 @@ setup(
     url=URL,
     packages=["showip"],
     entry_points={
-        "console_scripts": ["showip=showip.cli:main"]
+        "console_scripts": ["showip=showip.cli:main", "myip=showip.cli:main"]
     },
     install_requires=REQUIRED,
     license="MIT",

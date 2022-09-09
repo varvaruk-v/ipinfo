@@ -1,5 +1,8 @@
 def main():
-    from showip.showip import getdata, dns
+    try:
+        from showip.showip import getdata, dns
+    except ModuleNotFoundError:
+        from showip import getdata, dns
     import argparse
 
     parser = argparse.ArgumentParser(description='Get information about your IP or any other IP')
