@@ -7,10 +7,13 @@ def main():
     args = parser.parse_args()
 
     data = getdata(args.ip)
-    dns = dns()
     print(f'IP: {data["query"]}\nCountry: {data["country"]}, {data["countryCode"]}\nRegion: {data["regionName"]}, {data["region"]}\nCity: {data["city"]}\nISP: {data["isp"]}\nReverse: {data["reverse"]}')
     if args.ip == None:
-        print("----------------------------")
-        print(f"DNS: {dns['dns']['ip']}({dns['dns']['geo']})")
+        try:
+            dns = dns()
+            print("----------------------------")
+            print(f"DNS: {dns['dns']['ip']}({dns['dns']['geo']})")
+        except:
+            print("Can't get DNS")
 if __name__ == "__main__":
     main()
