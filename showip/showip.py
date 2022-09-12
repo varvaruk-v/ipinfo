@@ -11,6 +11,8 @@ def getdata(ip=""):
             isp = data["as"].split(" ")
             isp.pop(0)
             isp = " ".join(isp)
+            if isp == "":
+                isp = data["isp"]
             data["isp"] = isp
             if data["reverse"] == "":
                 data["reverse"] = data["query"]
